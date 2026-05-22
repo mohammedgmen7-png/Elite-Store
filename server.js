@@ -21,11 +21,11 @@ mongoose.connect(process.env.MONGODB_URI, {
 .then(() => console.log('✅ MongoDB متصل بنجاح'))
 .catch(err => console.log('❌ خطأ في الاتصال بـ MongoDB:', err));
 
-// Import Routes
-const userRoutes = require('./routes/user');
-const orderRoutes = require('./routes/order');
-const adminRoutes = require('./routes/admin');
-const gameRoutes = require('./routes/game');
+// Import Routes - تم تعديل المسارات لتطابق مكان الملفات
+const userRoutes = require('./routes_user');
+const orderRoutes = require('./routes_order');
+const adminRoutes = require('./routes_admin');
+const gameRoutes = require('./routes_game');
 
 // Use Routes
 app.use('/api/user', userRoutes);
